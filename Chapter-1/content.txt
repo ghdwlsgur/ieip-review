@@ -50,3 +50,7 @@ UNIX와 LINUX에서 새로운 프로세스를 생성한다는 것은 기존 프�
 이루어지고 있습니다.
 
 
+function test() {
+  return Promise.all([getTest(), getApply()]).then()
+}
+test().then(console.log)
