@@ -54,3 +54,11 @@ function test() {
   return Promise.all([getTest(), getApply()]).then()
 }
 test().then(console.log)
+
+async function main() {
+  const promises = [];
+  for (var i = 0; i < 10; i++) {
+    promises.push(asyncHello(i))
+  }
+  await Promise.all(promises);
+}
